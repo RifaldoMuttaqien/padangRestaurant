@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+header img{
+    height: 80px;
+    margin-left: 40px;
+}
+
+header{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    box-shadow: 0 0 3px 0 black;
+}
+
+nav *{
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a{
+    color: black;
+    text-decoration: none;
+}
+
+header, nav{
+    justify-content: space-around;
+}
+
+nav{
+    margin: left;
+}
+
+.app-bar__menu {
+    display: flex;
+    align-items: center;
+}
+
+.app-bar__menu button{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    top: 80px;
+    right: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    overflow: hidden;
+}
+
+nav.open{
+    left: 0;
+}
+
+nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+li a{
+    min-width: 44px;
+    min-height: 44px;
+}
+
+
+
+/*
+Jumbotron
+*/
+
+.container{
+ width: 100%;
+ display: flex;
+ align-items: center;
+ min-height: 300px; 
+ text-align: center;
+ background-image: url('https://www.cimbniaga.co.id/content/dam/cimb/inspirasi/skye.webp');  
+background-position: center;
+background-color: rgb(225, 1, 1);
+}
+
+.jumbotron{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.jumbotron h1{
+    color: #fff;
+    margin-top: 16px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.jumbotron p{
+    color: #fff;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+main{
+    padding: 32px;
+    flex: 1;
+}
+
+footer{
+    padding: 16px;
+}
+
+footer p {
+    text-align: center;
+    color: #aaaaaa;
+}
+
+footer p a{
+    color: #db0000;
+}
+
+/* Restaurant Detail */
+.restaurant__title{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.restaurant__poster{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.restaurant__info h3{
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.restaurant__info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+.restaurant__info h4{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.restaurant__info p {
+    margin-bottom: 10px;
+  }
+
+  .restaurant__info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .restaurant__info ul li {
+    margin-bottom: 5px;
+  }
+
+  .restaurant-item__header__rating {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  .restaurant-item__header__rating p {
+    margin: 0;
+  }
+
+  
+.restaurant-item__header__rating__score {
+    font-weight: bold;
+  }
+
+/* Restaurant List */
+
+.restaurants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+.restaurant-item{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.restaurant-item__header{
+    position: relative;
+}
+
+.restaurant-item__header__poster{
+    width: 100%;
+}
+
+.restaurant-item__header__rating{
+    position: absolute;
+    padding: 8px;
+    bottom: 20px;
+    left: 10px;
+    display: block;
+    background-color: beige;
+    color: black;
+}
+
+.restaurant-item__header__rating__score{
+    margin-left: 10px;
+}
+
+.restaurant-item__content{
+    padding: 15px;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.restaurant-item__content h3{
+    margin: 0 0 10px 0;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.restaurant-item__content  a{
+    color: orange;
+    text-decoration: none;
+    min-width: 44px;
+    min-height: 44px;
+  display: inline-block; 
+  padding: 10px;
+}
+
+.restaurant-item__content p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+/* LIKE */
+
+.like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db0000;
+    
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+
+  button{
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* FOOTER */
+
+  footer{
+  
+    background-color: #555;
+  }
+  
+  footer a{
+    text-decoration: none;
+    color: #eee;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .ft-title{
+    color: #fff;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+  }
+  
+  .ft-main{
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .ft-main-item{
+    padding: 1.25rem;
+    min-width: 12.5rem;
+  }
+  
+  
+  
+  
+  
+  /* FOOTER */
+
+  footer{
+  
+    background-color: #555;
+  }
+  
+  footer a{
+    text-decoration: none;
+    color: #eee;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .ft-title{
+    color: #fff;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+  }
+  
+  .ft-main{
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .ft-main-item{
+    padding: 1.25rem;
+    min-width: 12.5rem;
+  }
+  
+  .ft-main-item ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+
+  
+  
+  /* FOOTER */
+  form{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  p{
+    color: gray;
+  }
+  
+  
+  
+  
+  .ft-social{
+    padding: 0 1.875rem 1.25rem;
+  }
+  
+  .ft-social-list{
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid;
+    padding-top: 1.25rem;
+    list-style-type: none;
+  }
+
+  .ft-social-list li a{
+    display: inline-block; 
+  padding: 10px; 
+  min-width: 44px; 
+  min-height: 44px; 
+  text-align: center;
+  box-sizing: border-box;
+  list-style-type: none;
+  }
+  
+  .ft-social-list li{
+    margin: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .ft-legal{
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+  }
+  
+  .ft-legal-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .ft-legal-list li{
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+  }
+  .li-ft-legal-list{
+    color: gray;
+  }
+  .ft-social-list a{
+    min-width: 44px;
+      min-height: 44px;
+  }
+  .ft-social-list li a{
+    min-width: 44px;
+      min-height: 44px;
+  }
+  
+  button.menu-icon {
+    min-width: 44px;
+    min-height: 44px;
+    
+  }
+  
+  
+ .ft-main-item ul li a {
+    display: inline-block;
+    padding: 10px;
+    min-height: 44px;
+    min-width: 44px; 
+    text-align: center; 
+    box-sizing: border-box; 
+    list-style-type: none;
+  }
+  
+  input[type="text"],
+  textarea {
+    min-width: 44px;
+    min-height: 44px;
+    /* Properti CSS lainnya */
+  }
+  
+  input[type="email"] {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px; 
+  }
+  input[type="submit"] {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px; 
+    background-color: #00d188;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+  }
+  button, a, input[type="text"], textarea {
+      min-width: 44px;
+      min-height: 44px;
+      padding: 10px; 
+  }
